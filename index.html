@@ -1,0 +1,403 @@
+<!doctype html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport"content="width=device-width, initial-scale=1.0 minimum-scale=1.0 minimum-scale=1.0"/>
+    <link rel="stylesheet" href="./style/style.css" />
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg viewBox='0 0 16 16' width='16' height='16' xmlns='http://www.w3.org/2000/svg'%3E%3Cdefs%3E%3ClinearGradient id='fire' x1='0%25' y1='0%25' x2='0%25' y2='100%25'%3E%3Cstop offset='0%25' style='stop-color:%23FFD700' /%3E%3Cstop offset='100%25' style='stop-color:%23FF4500' /%3E%3C/linearGradient%3E%3C/defs%3E%3Cpath fill='url(%23fire)' d='M9.533.753V.752c.217 2.385 1.463 3.626 2.653 4.81C13.37 6.74 14.498 7.863 14.498 10c0 3.5-3 6-6.5 6S1.5 13.512 1.5 10c0-1.298.536-2.56 1.425-3.286.376-.308.862 0 1.035.454C4.46 8.487 5.581 8.419 6 8c.282-.282.341-.811-.003-1.5C4.34 3.187 7.035.75 8.77.146c.39-.137.726.194.763.607ZM7.998 14.5c2.832 0 5-1.98 5-4.5 0-1.463-.68-2.19-1.879-3.383l-.036-.037c-1.013-1.008-2.3-2.29-2.834-4.434-.322.256-.63.579-.864.953-.432.696-.621 1.58-.046 2.73.473.947.67 2.284-.278 3.232-.61.61-1.545.84-2.403.633a2.79 2.79 0 0 1-1.436-.874A3.198 3.198 0 0 0 3 10c0 2.53 2.164 4.5 4.998 4.5Z'%3E%3C/path%3E%3C/svg%3E">
+    <title>Hot type</title>
+  </head>
+
+  <body>
+
+    <div class="back_and_restart">
+
+      <input class="backing" type="checkbox" id="esc_button_id" hidden>
+      <label class="esc_button" for="esc_button_id">
+          <span style="font-size: 16px; position: absolute; left: 10px; bottom: 10px;">esc</span>
+          <svg class="svg_with_border" viewBox="0 0 48 48" width="36px"><path d="M 24.155 12.732 Q 29.623 5.674 35.004 12.732 L 38.365 17.142 Q 43.746 24.2 32.897 24.2 L 26.121 24.2 Q 15.272 24.2 20.74 17.142 Z" bx:shape="triangle 15.272 5.674 28.474 18.526 0.504 0.381 1@66d21dbf" style="stroke-width: 0px; transform-box: fill-box; transform-origin: 50% 50%;" transform="matrix(0, -1, 1, 0, -12.815773, -5.37472)"/><path style="fill: none; stroke-linecap: round; fill-rule: nonzero; stroke-width: 4px; transform-box: fill-box; transform-origin: 50% 50%;" d="M 24.138 11.316 C 36.326 11.316 43.943 24.509 37.849 35.064 C 31.756 45.619 16.521 45.619 10.428 35.064 C 9.12 32.799 8.394 30.244 8.314 27.63" id="object-0"/></svg>
+      </label>
+
+      <input class="backing" type="checkbox" id="delete_button_id" hidden>
+      <label class="delete_button" for="delete_button_id">
+          <svg viewBox="0 0 48 48" width="36px"><path d="M 19.219 43.848 L 10.636 43.848 C 6.335 43.841 2.852 39.913 2.849 35.07 L 2.849 13.042 C 2.852 8.197 6.335 4.269 10.636 4.263 L 19.2 4.263 C 23.499 4.266 26.987 8.196 26.992 13.042 L 26.992 14.888 C 26.992 16.029 25.895 16.744 25.016 16.172 C 24.608 15.906 24.357 15.418 24.357 14.888 L 24.357 13.042 C 24.354 9.834 22.045 7.233 19.2 7.232 L 10.636 7.232 C 7.791 7.236 5.484 9.837 5.484 13.042 L 5.484 35.07 C 5.485 38.274 7.791 40.872 10.636 40.879 L 19.219 40.879 C 22.054 40.872 24.352 38.286 24.357 35.091 L 24.357 33.226 C 24.357 32.081 25.455 31.366 26.333 31.938 C 26.741 32.204 26.992 32.695 26.992 33.226 L 26.992 35.091 C 26.985 39.925 23.508 43.842 19.219 43.848" clip-rule="evenodd" style="stroke-width: 1;"></path><mask id="mask0_1732_25384" width="15" height="2" x="8" y="11" maskUnits="userSpaceOnUse" style="mask-type: luminance;"><path fill-rule="evenodd" d="M8.996 11.25h13.541v1.5H8.997v-1.5" clip-rule="evenodd"></path></mask><g transform="matrix(1.979263, 0, 0, 1.979263, -1.110182, 0.303128)"><path d="M21.787 12.75H9.747a.75.75 0 0 1 0-1.5h12.04a.75.75 0 0 1 0 1.5" clip-rule="evenodd"></path></g><path d="M -6.389 1.384 Q -0.921 -5.674 4.46 1.384 L 7.821 5.794 Q 13.202 12.852 2.353 12.852 L -4.423 12.852 Q -15.272 12.852 -9.804 5.794 Z" bx:shape="triangle -15.272 -5.674 28.474 18.526 0.504 0.381 1@feeb4e28" style="stroke-width: 0; transform-origin: -1.016px 5.353px;" transform="matrix(0, -1, -1, 0, 38.944818, 18.607211)"></path></svg>
+      </label>
+
+    </div>
+    
+    <div class="mini_container">
+
+      <input type="text" name="text_mini_box" class="text_mini_box" autocomplete="off">
+      
+      <div class="speed">
+        <span class="km_number">0</span>
+        <svg class="speed_svg" viewBox="223.191 96.681 719.633 440.783"><ellipse cx="286.604" cy="454.421" rx="5.763" ry="5.763"/><ellipse cx="315.599" cy="307.746" rx="5.763" ry="5.763"/><ellipse cx="427.494" cy="199.339" rx="5.763" ry="5.763"/><ellipse cx="574.911" cy="154.617" rx="5.763" ry="5.763"/><ellipse cx="729.607" cy="199.615" rx="5.763" ry="5.763"/><ellipse cx="841.278" cy="307.414" rx="5.763" ry="5.763"/><ellipse cx="877.642" cy="454.481" rx="5.763" ry="5.763"/></svg>
+        <div class="km"></div>
+      </div>
+
+      <!-- <div class="blur" style="position: absolute;width: 500px;height: 100%;backdrop-filter: blur(10px);"></div> -->
+
+      <div class="timer">
+        <span class="timer_number minute">00</span>
+        <span class="timer_number ">:</span>
+        <span class="timer_number second">00</span>
+      </div>
+
+    </div>
+
+    <div class="for_test_size"></div>
+
+    <div class="testing_box_protector"></div>
+
+    <input class="input_btn" type="checkbox" id="button" hidden />
+    <label class="label_btn start_menu" for="button"><svg viewBox="0 0 16 16" width="50px"><path d="M8 0a8 8 0 1 1 0 16A8 8 0 0 1 8 0ZM1.5 8a6.5 6.5 0 1 0 13 0 6.5 6.5 0 0 0-13 0Zm4.879-2.773 4.264 2.559a.25.25 0 0 1 0 .428l-4.264 2.559A.25.25 0 0 1 6 10.559V5.442a.25.25 0 0 1 .379-.215Z"></path></svg></label>
+
+    <div class="menu__design starter about_me">
+      <div class="bg_image">
+        <img class="bg_image_1" src="style/image1.jpeg" alt="">
+      </div>
+      
+      <input class="input_btn" name="menu" type="checkbox" id="about_me" hidden />
+      <div class="bluring" style="font-size: 30px;">about me</div>
+      <label class="label_btn" for="about_me">
+        <div class="conteiner">
+          <div class="head"></div>
+          <div class="body"></div>
+          <div class="foot1 foot"></div>
+          <div class="foot2 foot"></div>
+          <div class="shadow"></div>
+        </div>
+      </label>
+      
+    </div>
+
+    <button class="menu__design starter git_link">
+        <div class="git_glass">
+          <svg class="git_icon" height="60px" viewBox="0 0 24 24" ><path d="M10.226 17.284c-2.965-.36-5.054-2.493-5.054-5.256 0-1.123.404-2.336 1.078-3.144-.292-.741-.247-2.314.09-2.965.898-.112 2.111.36 2.83 1.01.853-.269 1.752-.404 2.853-.404 1.1 0 1.999.135 2.807.382.696-.629 1.932-1.1 2.83-.988.315.606.36 2.179.067 2.942.72.854 1.101 2 1.101 3.167 0 2.763-2.089 4.852-5.098 5.234.763.494 1.28 1.572 1.28 2.807v2.336c0 .674.561 1.056 1.235.786 4.066-1.55 7.255-5.615 7.255-10.646C23.5 6.188 18.334 1 11.978 1 5.62 1 .5 6.188.5 12.545c0 4.986 3.167 9.12 7.435 10.669.606.225 1.19-.18 1.19-.786V20.63a2.9 2.9 0 0 1-1.078.224c-1.483 0-2.359-.808-2.987-2.313-.247-.607-.517-.966-1.034-1.033-.27-.023-.359-.135-.359-.27 0-.27.45-.471.898-.471.652 0 1.213.404 1.797 1.235.45.651.921.943 1.483.943.561 0 .92-.202 1.437-.719.382-.381.674-.718.944-.943"></path></svg>
+        </div>
+    </button>
+
+    <div class="menu__design starter info_bar">
+      <input type="radio" name="menu" id="info_bar" hidden />
+      <label for="info_bar">
+        
+        <!-- <input type="checkbox" name="edit_svg1" id="edit_svg1" hidden>
+        <div class="edit">
+          <label for="edit_svg1">
+            <svg class="edit_svg" width="30" viewBox="0 0 24 24" role="img" aria-label="Edit-icon"><path d="M20.75 21.941h-7.254a.75.75 0 0 1 0-1.5h7.253a.75.75 0 0 1 0 1.5" clip-rule="evenodd" fill-rule="evenodd"></path><mask id="mask0_1732_25388" width="18" height="19" x="2" y="3" maskUnits="userSpaceOnUse" style="mask-type: luminance;"><path d="M2 3h17.18v18.94H2z" clip-rule="evenodd"></path></mask><g><path d="M13.11 5.015 3.695 16.79c-.171.214-.234.49-.171.755l.68 2.885 3.04-.038a.949.949 0 0 0 .733-.352c3.217-4.025 9.35-11.699 9.524-11.924a1.36 1.36 0 0 0 .142-1.004 1.411 1.411 0 0 0-.652-.887 328.898 328.898 0 0 1-1.808-1.398 1.497 1.497 0 0 0-2.073.188M3.613 21.94a.75.75 0 0 1-.73-.577l-.819-3.471a2.371 2.371 0 0 1 .46-2.037l9.42-11.782c.004-.004.007-.01.011-.013 1.033-1.235 2.901-1.417 4.161-.406l1.723 1.339c.608.362 1.083 1.009 1.263 1.775.18.758.05 1.54-.368 2.2-.03.05-.058.092-9.586 12.012a2.447 2.447 0 0 1-1.886.914l-3.639.046h-.01" clip-rule="evenodd"></path></g><path d="M16.221 11.683a.753.753 0 0 1-.457-.155L10.314 7.34a.75.75 0 0 1 .913-1.189l5.454 4.187a.75.75 0 0 1-.459 1.345" clip-rule="evenodd" fill-rule="evenodd"></path></svg>    
+          </label>
+        </div> -->
+        
+        <div class="prof_photo">
+          <svg viewBox="0 0 16 16"><path d="M10.561 8.073a6.005 6.005 0 0 1 3.432 5.142.75.75 0 1 1-1.498.07 4.5 4.5 0 0 0-8.99 0 .75.75 0 0 1-1.498-.07 6.004 6.004 0 0 1 3.431-5.142 3.999 3.999 0 1 1 5.123 0ZM10.5 5a2.5 2.5 0 1 0-5 0 2.5 2.5 0 0 0 5 0Z"></path></svg>
+        </div>
+ 
+        <div class="username_div">
+          <input type="text" name="username" id="username" value="Click to rename" autocomplete="off" maxlength="20">
+        </div>
+        
+      </label>
+      
+    </div>
+
+    <div class="menu__design starter type_history">
+
+      <input class="input_btn"name="menu"type="radio"id="type_history"hidden/>
+      <label class="label_btn his" for="type_history">
+
+        <div class="score_monitor">
+
+          <div class="score_board">
+            <span class="score_title pixel_font">Score Board</span>
+          </div>
+
+          <div class="score_container">
+
+            <div class="score_row pixel_font">
+              <span class="score_fa_title pixel_font">فا</span>
+                <div>
+                  <span class="pixel_font mini_detail">top</span>
+                  <span class="pixel_font num_detail" id="fa_score_top">000</span>
+                </div>
+                <div>
+                  <span class="pixel_font mini_detail">last</span>
+                  <span class="pixel_font num_detail" id="fa_score">000</span>
+                </div>
+              </div>
+              
+              <div class="score_row pixel_font">
+                <span class="score_fa_title pixel_font">En</span>
+                <div>
+                  <span class="pixel_font mini_detail">top</span>
+                  <span class="pixel_font num_detail" id="en_score_top">000</span>
+                </div>
+                <div>
+                  <span class="pixel_font mini_detail">last</span>
+                  <span class="pixel_font num_detail" id="en_score">000</span>
+                </div>
+              </div>
+              
+              <div class="score_row pixel_font">
+                <span class="score_fa_title pixel_font">01</span>
+                <div>
+                  <span class="pixel_font mini_detail">top</span>
+                  <span class="pixel_font num_detail" id="num_score_top">000</span>
+                </div>
+                <div>
+                  <span class="pixel_font mini_detail">last</span>
+                  <span class="pixel_font num_detail" id="num_score">000</span>
+                </div>
+                
+              </div>
+              
+              <div class="score_row pixel_font">
+                <span class="score_fa_title pixel_font">&#60&#62</span>
+                <div>
+                  <span class="pixel_font mini_detail">top</span>
+                  <span class="pixel_font num_detail" id="code_score_top">000</span>
+                </div>
+                <div>
+                  <span class="pixel_font mini_detail">last</span>
+                  <span class="pixel_font num_detail" id="code_score">000</span>
+                </div>
+              
+            </div>
+          </div>
+        </div>
+        <!-- <div class="history_board fa_history"></div>
+        <div class="history_board en_history"></div>
+        <div class="history_board num_history"></div>
+        <div class="history_board code_history"></div> -->
+        
+        <!-- <svg viewBox="0 0 16 16" width="60px"><path d="M1.5 1.75V13.5h13.75a.75.75 0 0 1 0 1.5H.75a.75.75 0 0 1-.75-.75V1.75a.75.75 0 0 1 1.5 0Zm14.28 2.53-5.25 5.25a.75.75 0 0 1-1.06 0L7 7.06 4.28 9.78a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042l3.25-3.25a.75.75 0 0 1 1.06 0L10 7.94l4.72-4.72a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042Z"></path></svg> -->
+      </label>
+    </div>
+
+    <div class="menu__design starter start_type">
+
+      <div class="typing_mode_container typing_mode_container_fa">
+        <div class="typing_mode fa_mode">
+          <div class="typing_mode_data">
+            <div class="typing_svg">
+              <svg class="ani_svg" width="32" viewBox="0 0 206 338"><path stroke-width="1" opacity="1" d="M 133.5 18 L 143.5 20 L 160 35.5 Q 165.5 40 165 50.5 Q 157.7 73.7 142.5 89 Q 123.6 80.9 110 67.5 Q 116.6 37.6 133.5 18 Z " /><path stroke-width="1" opacity="1" d="M 70.5 57 L 72 58.5 L 72 72.5 L 58 184.5 L 56 223.5 Q 56.9 243.6 68.5 253 Q 79.5 263 102.5 261 Q 122.7 258.7 133 246.5 L 139 234.5 L 132.5 225 L 128.5 224 L 111.5 231 Q 100.4 230.1 95 223.5 Q 90.9 220.6 92 212.5 Q 100.5 181 119.5 160 L 129.5 157 Q 144.6 160.4 152 171.5 Q 163.7 184.3 161 211.5 Q 150.4 273.4 112.5 308 Q 98.8 321.8 69.5 320 Q 52.3 317.2 44 305.5 Q 28.2 283.8 32 242.5 Q 37 173.5 49 111.5 L 70.5 57 Z " /></svg>
+            </div>
+            <span class="mode_data">Persian Typing</span>
+            <div style="direction: rtl;" class="data_container_fa data_container"></div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="typing_mode_container typing_mode_container_en">
+        <div class="typing_mode en_mode">
+          <div class="typing_mode_data typing_mode_data_en">
+            <div class="typing_svg">
+              <svg class="ani_svg" width="50" viewBox="0 0 270 206"><path stroke-width="1" opacity="1" d="M 4 6 L 124.5 6 L 125 34 L 37 34 L 37 86 L 113 86 L 113 114 L 37 114 L 37 172 L 125.5 172 L 126 200 L 4 200 L 4 6 Z " /><path stroke-width="1" opacity="1" d="M 207.5 51 Q 242.7 49.8 256 70.5 Q 263.5 82 265 99.5 L 265 200 L 232 200 L 232 104.5 Q 231.3 89.7 222.5 83 Q 213.8 77.7 197.5 80 Q 187 82.5 181 89.5 L 178 93.5 L 178 200 L 145 199.5 L 145 54 L 174.5 54 L 175 60.5 L 176.5 67 Q 187.5 54.5 207.5 51 Z " /></svg>
+            </div>
+            <span class="mode_data">English Typing</span>
+            <div class="data_container_en data_container"></div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="typing_mode_container typing_mode_container_num">
+        <div class="typing_mode num_mode">
+          <div class="typing_mode_data">
+            <div class="typing_svg">
+              <svg class="ani_svg" width="46"viewBox="0 0 246 218" ><path stroke-width="1" opacity="1" d="M 62.5 11 Q 104.3 9.7 120 34.5 Q 131.8 49.2 134 73.5 L 134 147.5 Q 130.3 183.3 107.5 200 Q 93.7 210.7 69.5 211 Q 38.6 208.9 24 190.5 Q 11.5 176.5 8 153.5 L 8 69.5 Q 12.7 38.7 32.5 23 Q 44.1 13.6 62.5 11 Z M 65 39 L 54 44 Q 43 52 41 68 L 41 154 L 49 174 Q 54 182 67 183 Q 79 184 87 179 Q 100 170 101 150 L 101 73 Q 100 59 94 51 Q 87 37 65 39 Z " /><path stroke-width="1" opacity="1" d="M 231.5 11 L 239 11.5 L 239 208 L 206 208 L 206 45.5 L 165 45 L 165 19.5 L 173.5 17 L 231.5 11 Z " /></svg>
+            </div>
+            <span class="mode_data">Number Typing</span>
+            <div class="data_container_num data_container"></div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="typing_mode_container typing_mode_container_code">
+        <div class="typing_mode code_mode">
+          <div class="typing_mode_data">
+            <div class="typing_svg">
+              <svg class="ani_svg" class="mode_data" viewBox="0 0 16 16" width="60"><path d="m11.28 3.22 4.25 4.25a.75.75 0 0 1 0 1.06l-4.25 4.25a.749.749 0 0 1-1.275-.326.749.749 0 0 1 .215-.734L13.94 8l-3.72-3.72a.749.749 0 0 1 .326-1.275.749.749 0 0 1 .734.215Zm-6.56 0a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042L2.06 8l3.72 3.72a.749.749 0 0 1-.326 1.275.749.749 0 0 1-.734-.215L.47 8.53a.75.75 0 0 1 0-1.06Z"></path></svg>
+            </div>
+            <span class="mode_data">Code Typing</span>
+            <div class="data_container_code data_container"></div>
+          </div>
+        </div>
+      </div>
+
+
+    </div>
+
+    <div class="menu__design starter settings">
+      <input class="input_btn"name="menu"type="checkbox"id="settings_btn"hidden/>
+      <label class="label_btn" for="settings_btn">
+        <div class="btn">
+          <svg viewBox="0 0 16 16" width="60px"><path d="M8 0a8.2 8.2 0 0 1 .701.031C9.444.095 9.99.645 10.16 1.29l.288 1.107c.018.066.079.158.212.224.231.114.454.243.668.386.123.082.233.09.299.071l1.103-.303c.644-.176 1.392.021 1.82.63.27.385.506.792.704 1.218.315.675.111 1.422-.364 1.891l-.814.806c-.049.048-.098.147-.088.294.016.257.016.515 0 .772-.01.147.038.246.088.294l.814.806c.475.469.679 1.216.364 1.891a7.977 7.977 0 0 1-.704 1.217c-.428.61-1.176.807-1.82.63l-1.102-.302c-.067-.019-.177-.011-.3.071a5.909 5.909 0 0 1-.668.386c-.133.066-.194.158-.211.224l-.29 1.106c-.168.646-.715 1.196-1.458 1.26a8.006 8.006 0 0 1-1.402 0c-.743-.064-1.289-.614-1.458-1.26l-.289-1.106c-.018-.066-.079-.158-.212-.224a5.738 5.738 0 0 1-.668-.386c-.123-.082-.233-.09-.299-.071l-1.103.303c-.644.176-1.392-.021-1.82-.63a8.12 8.12 0 0 1-.704-1.218c-.315-.675-.111-1.422.363-1.891l.815-.806c.05-.048.098-.147.088-.294a6.214 6.214 0 0 1 0-.772c.01-.147-.038-.246-.088-.294l-.815-.806C.635 6.045.431 5.298.746 4.623a7.92 7.92 0 0 1 .704-1.217c.428-.61 1.176-.807 1.82-.63l1.102.302c.067.019.177.011.3-.071.214-.143.437-.272.668-.386.133-.066.194-.158.211-.224l.29-1.106C6.009.645 6.556.095 7.299.03 7.53.01 7.764 0 8 0Zm-.571 1.525c-.036.003-.108.036-.137.146l-.289 1.105c-.147.561-.549.967-.998 1.189-.173.086-.34.183-.5.29-.417.278-.97.423-1.529.27l-1.103-.303c-.109-.03-.175.016-.195.045-.22.312-.412.644-.573.99-.014.031-.021.11.059.19l.815.806c.411.406.562.957.53 1.456a4.709 4.709 0 0 0 0 .582c.032.499-.119 1.05-.53 1.456l-.815.806c-.081.08-.073.159-.059.19.162.346.353.677.573.989.02.03.085.076.195.046l1.102-.303c.56-.153 1.113-.008 1.53.27.161.107.328.204.501.29.447.222.85.629.997 1.189l.289 1.105c.029.109.101.143.137.146a6.6 6.6 0 0 0 1.142 0c.036-.003.108-.036.137-.146l.289-1.105c.147-.561.549-.967.998-1.189.173-.086.34-.183.5-.29.417-.278.97-.423 1.529-.27l1.103.303c.109.029.175-.016.195-.045.22-.313.411-.644.573-.99.014-.031.021-.11-.059-.19l-.815-.806c-.411-.406-.562-.957-.53-1.456a4.709 4.709 0 0 0 0-.582c-.032-.499.119-1.05.53-1.456l.815-.806c.081-.08.073-.159.059-.19a6.464 6.464 0 0 0-.573-.989c-.02-.03-.085-.076-.195-.046l-1.102.303c-.56.153-1.113.008-1.53-.27a4.44 4.44 0 0 0-.501-.29c-.447-.222-.85-.629-.997-1.189l-.289-1.105c-.029-.11-.101-.143-.137-.146a6.6 6.6 0 0 0-1.142 0ZM11 8a3 3 0 1 1-6 0 3 3 0 0 1 6 0ZM9.5 8a1.5 1.5 0 1 0-3.001.001A1.5 1.5 0 0 0 9.5 8Z"></path></svg>
+        </div>
+      </label>
+
+      <div class="costum_divs themes">
+
+        <div class="theme_colors">
+          
+          <div class="theme__block theme_0">
+            <input class="theme_checkbox" type="radio" name="theme" id="theme0" value="var(--bgc-default)" bxsh-out="var(--bxsh-default-out)" bxsh-in="var(--bxsh-default-in)" color="var(--fill-default)" cursor="var(--cursor-d)" bxsh-in-rev="var(--bxsh-default-in-rev)" bxsh-hov="var(--bxsh-default-hov)" hidden checked>
+            <label for="theme0" ><svg style="fill:#a2a2ff ;" viewBox="0 0 16 16"><path d="M13.78 4.22a.75.75 0 0 1 0 1.06l-7.25 7.25a.75.75 0 0 1-1.06 0L2.22 9.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018L6 10.94l6.72-6.72a.75.75 0 0 1 1.06 0Z"></path></svg></label>
+          </div>
+
+          <div class="theme__block theme_1">
+            <input class="theme_checkbox" type="radio" name="theme" id="theme1" value="var(--bgc-1)" bxsh-out="var(--bxsh-1-out)" bxsh-in="var(--bxsh-1-in)" color="var(--fill-1)"cursor="var(--cursor-1)" bxsh-in-rev="var(--bxsh-1-in-rev)" bxsh-hov="var(--bxsh-1-hov)" hidden>
+            <label for="theme1" ><svg style="fill:#50b197 ;" viewBox="0 0 16 16"><path d="M13.78 4.22a.75.75 0 0 1 0 1.06l-7.25 7.25a.75.75 0 0 1-1.06 0L2.22 9.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018L6 10.94l6.72-6.72a.75.75 0 0 1 1.06 0Z"></path></svg></label>
+          </div>
+          
+          <div class="theme__block theme_2">
+            <input class="theme_checkbox" type="radio" name="theme" id="theme2" value="var(--bgc-2)" bxsh-out="var(--bxsh-2-out)" bxsh-in="var(--bxsh-2-in)" color="var(--fill-2)"cursor="var(--cursor-2)" bxsh-in-rev="var(--bxsh-2-in-rev)" bxsh-hov="var(--bxsh-2-hov)" hidden>
+            <label for="theme2" ><svg style="fill:#939393 ;" viewBox="0 0 16 16"><path d="M13.78 4.22a.75.75 0 0 1 0 1.06l-7.25 7.25a.75.75 0 0 1-1.06 0L2.22 9.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018L6 10.94l6.72-6.72a.75.75 0 0 1 1.06 0Z"></path></svg></label>
+          </div>
+          
+          <div class="theme__block theme_3">
+            <input class="theme_checkbox" type="radio" name="theme" id="theme3" value="var(--bgc-3)" bxsh-out="var(--bxsh-3-out)" bxsh-in="var(--bxsh-3-in)" color="var(--fill-3)"cursor="var(--cursor-3)" bxsh-in-rev="var(--bxsh-3-in-rev)" bxsh-hov="var(--bxsh-3-hov)" hidden>
+            <label for="theme3" ><svg style="fill: #0073d3;" viewBox="0 0 16 16"><path d="M13.78 4.22a.75.75 0 0 1 0 1.06l-7.25 7.25a.75.75 0 0 1-1.06 0L2.22 9.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018L6 10.94l6.72-6.72a.75.75 0 0 1 1.06 0Z"></path></svg></label>
+          </div>
+          
+          <div class="theme__block theme_4">
+            <input class="theme_checkbox" type="radio" name="theme" id="theme4" value="var(--bgc-4)" bxsh-out="var(--bxsh-4-out)" bxsh-in="var(--bxsh-4-in)" color="var(--fill-4)"cursor="var(--cursor-4)" bxsh-in-rev="var(--bxsh-4-in-rev)" bxsh-hov="var(--bxsh-4-hov)" hidden>
+            <label for="theme4" ><svg style="fill:#724700;" viewBox="0 0 16 16"><path d="M13.78 4.22a.75.75 0 0 1 0 1.06l-7.25 7.25a.75.75 0 0 1-1.06 0L2.22 9.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018L6 10.94l6.72-6.72a.75.75 0 0 1 1.06 0Z"></path></svg></label>
+          </div>
+          
+          <div class="theme__block personal_theme">
+            <input class="theme_checkbox per_color" type="color" value="#008cff" id="personal_theme_input" bxsh-out="var(--bxsh-per-out)" bxsh-in="var(--bxsh-per-in)" color="var(--fill-per)" bxsh-in-rev="var(--bxsh-per-in-rev)" cursor="var(--cursor-p)" bxsh-hov="var(--bxsh-per-hov)" >
+            <label for="personal_theme_input" class="per_color"><svg style="opacity:1 ;width: 40%;fill: #008cff;"class="color_svg" viewBox="0 0 16 16"><path d="M11.134 1.535c.7-.509 1.416-.942 2.076-1.155.649-.21 1.463-.267 2.069.34.603.601.568 1.411.368 2.07-.202.668-.624 1.39-1.125 2.096-1.011 1.424-2.496 2.987-3.775 4.249-1.098 1.084-2.132 1.839-3.04 2.3a3.744 3.744 0 0 1-1.055 3.217c-.431.431-1.065.691-1.657.861-.614.177-1.294.287-1.914.357A21.151 21.151 0 0 1 .797 16H.743l.007-.75H.749L.742 16a.75.75 0 0 1-.743-.742l.743-.008-.742.007v-.054a21.25 21.25 0 0 1 .13-2.284c.067-.647.187-1.287.358-1.914.17-.591.43-1.226.86-1.657a3.746 3.746 0 0 1 3.227-1.054c.466-.893 1.225-1.907 2.314-2.982 1.271-1.255 2.833-2.75 4.245-3.777ZM1.62 13.089c-.051.464-.086.929-.104 1.395.466-.018.932-.053 1.396-.104a10.511 10.511 0 0 0 1.668-.309c.526-.151.856-.325 1.011-.48a2.25 2.25 0 1 0-3.182-3.182c-.155.155-.329.485-.48 1.01a10.515 10.515 0 0 0-.309 1.67Zm10.396-10.34c-1.224.89-2.605 2.189-3.822 3.384l1.718 1.718c1.21-1.205 2.51-2.597 3.387-3.833.47-.662.78-1.227.912-1.662.134-.444.032-.551.009-.575h-.001V1.78c-.014-.014-.113-.113-.548.027-.432.14-.995.462-1.655.942Zm-4.832 7.266-.001.001a9.859 9.859 0 0 0 1.63-1.142L7.155 7.216a9.7 9.7 0 0 0-1.161 1.607c.482.302.889.71 1.19 1.192Z"></path></svg></label>
+          </div>
+
+        </div>
+
+      </div>
+      <div class="costum_divs middle_settings">
+
+        <!-- <div class="language">
+
+          <input type="radio" name="language_radio" id="language_enId"hidden checked>
+          <input type="radio" name="language_radio" id="language_faId"hidden>
+          
+          
+          <div class="language1 language_en">
+            <label class="language_label language_en_label" for="language_enId" ><span class="lan_span">En</span></label>
+          </div>
+          
+          <div class="language1 language_fa">
+            <label class="language_label language_fa_label" for="language_faId" ><span class="lan_span">فا</span></label>
+          </div>
+          
+          <div class="lan_choser"></div>
+          
+
+        </div> -->
+        <div class="info_bar_bg"></div>
+      </div>
+      <div class="costum_divs fonts">
+
+        <div class="en_font_chose">
+          
+          <div class="en_choser"></div>
+          
+          <div class="en_font en_font1" >
+            <input type="radio" name="en_font" id="en_fontId1" font="tahoma" position="74.75%" hidden checked>
+            <span style="font-family: tahoma ;">Tahoma</span>
+            <label class="en_font_label" for="en_fontId1" ></label>
+          </div>
+          
+          <div class="en_font en_font2" >
+            <input type="radio" name="en_font" id="en_fontId2" font="roboto" position="51.25%" hidden>
+            <span style="font-family: roboto ;">Roboto</span>
+            <label class="en_font_label" for="en_fontId2" ></label>
+          </div>
+          
+          <div class="en_font en_font3" >
+            <input type="radio" name="en_font" id="en_fontId3" font="monaco" position="28%" hidden>
+            <span style="font-family: monaco;">Monaco</span>
+            <label class="en_font_label" for="en_fontId3" ></label>
+          </div>
+          
+          <div class="en_font en_font4" >
+            <input type="radio" name="en_font" id="en_fontId4" font="menlo" position="5%" hidden>
+            <span style="font-family: menlo;">Menlo</span>
+            <label class="en_font_label" for="en_fontId4" ></label>
+          </div>
+          
+          <!-- <div class="en_font en_font5" >
+            <input type="radio" name="en_font" id="en_fontId5" font="courier new" position="6%" hidden>
+            <span style="font-family:'courier new' ;">Ourier New</span>
+            <label class="en_font_label" for="en_fontId5" ></label>
+          </div> -->
+          
+        </div>
+        
+        <div class="fa_font_chose">
+          
+          <div class="fa_choser"></div>
+          
+          <div class="fa_font fa_font1">
+            <input type="radio" name="fa_font" id="fa_fontId1" font="yekan" position="76%" hidden checked>
+            <span style="font-family: yekan ;">یکان</span>
+            <label class="fa_font_lalbel" for="fa_fontId1" ></label>
+          </div>
+          
+          <div class="fa_font fa_font2">
+            <input type="radio" name="fa_font" id="fa_fontId2" font="roya" position="53%" hidden>
+            <span style="font-family: roya ;" >رویا</span>
+            <label class="fa_font_label" for="fa_fontId2" ></label>
+          </div>
+          
+          <div class="fa_font fa_font3">
+            <input type="radio" name="fa_font" id="fa_fontId3" font="tanha" position="30%" hidden>
+            <span style="font-family: tanha ;">تنها</span>
+            <label class="fa_font_label" for="fa_fontId3" ></label>
+          </div>
+          
+          <div class="fa_font fa_font4">
+            <input type="radio" name="fa_font" id="fa_fontId4" font="koodak" position="5%" hidden>
+            <span style="font-family: koodak;">کودک</span>
+            <label class="fa_font_label" for="fa_fontId4" ></label>
+          </div>
+          
+          <!-- <div class="fa_font fa_font5">
+            <input type="radio" name="fa_font" id="fa_fontId5" font="nazanin" position="5%" hidden>
+            <span style="font-family: nazanin ;">نازنین</span>
+            <label class="fa_font_label" for="fa_fontId5" ></label>
+          </div> -->
+
+        </div>
+      </div>
+
+    </div>
+
+    <div class="menu__design starter add_text">
+      <input class="input_btn" name="menu" type="radio" id="add_text" hidden />
+      <label class="label_btn" for="add_text">
+
+        <textarea name="add_text_area" id="add_text_area" placeholder="Enter 200 to 1000 characters"></textarea>
+        <svg class="add_svg" viewBox="0 0 24 24" width="70px"><path d="M12 8.25a.75.75 0 0 1 .75.75v2.25H15a.75.75 0 0 1 0 1.5h-2.25V15a.75.75 0 0 1-1.5 0v-2.25H9a.75.75 0 0 1 0-1.5h2.25V9a.75.75 0 0 1 .75-.75Z"></path><path d="M3 3a2 2 0 0 1 2-2h9.982a2 2 0 0 1 1.414.586l4.018 4.018A2 2 0 0 1 21 7.018V21a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V3Zm2-.5a.5.5 0 0 0-.5.5v18a.5.5 0 0 0 .5.5h14a.5.5 0 0 0 .5-.5V7.018a.5.5 0 0 0-.146-.354l-4.018-4.018a.5.5 0 0 0-.354-.146H5Z"></path></svg>
+        
+        <div class="testing_container">
+          <div class="testing_box"></div>
+        </div>
+        
+        <div class="adding" id="addingg">
+          <div class="adding_icon" id="addingg">
+            <div class="adding_line adding_line1"id="addingg"></div>
+            <div class="adding_line adding_line2"id="addingg"></div>
+          </div>
+        </div>
+          
+        <label class="add_text_area_label" for="add_text_area"></label>
+
+      </label>
+    </div>
+    
+    
+    <script src="/script/script.js"></script>
+    
+  </body>
+
+</html>
+
