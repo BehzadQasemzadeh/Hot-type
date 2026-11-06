@@ -11,6 +11,10 @@
 
   <body>
 
+    <div class="warning">
+      <svg class="warning_svg" viewBox="0 0 24 24" style="stroke: #c70000; fill: none ; width: 130px"><path stroke-linecap="round" stroke-linejoin="round" d="M12 9v3.75m9-.75a9 9 0 1 1-18 0 9 9 0 0 1 18 0Zm-9 3.75h.008v.008H12v-.008Z" /></svg>
+      <span style="font-size: 18px;padding: 10px;color: #a60000;" >Test it on PC with a larger window size.</span>
+    </div>
     <div class="back_and_restart">
 
       <input class="backing" type="checkbox" id="esc_button_id" hidden>
@@ -35,8 +39,6 @@
         <svg class="speed_svg" viewBox="223.191 96.681 719.633 440.783"><ellipse cx="286.604" cy="454.421" rx="5.763" ry="5.763"/><ellipse cx="315.599" cy="307.746" rx="5.763" ry="5.763"/><ellipse cx="427.494" cy="199.339" rx="5.763" ry="5.763"/><ellipse cx="574.911" cy="154.617" rx="5.763" ry="5.763"/><ellipse cx="729.607" cy="199.615" rx="5.763" ry="5.763"/><ellipse cx="841.278" cy="307.414" rx="5.763" ry="5.763"/><ellipse cx="877.642" cy="454.481" rx="5.763" ry="5.763"/></svg>
         <div class="km"></div>
       </div>
-
-      <!-- <div class="blur" style="position: absolute;width: 500px;height: 100%;backdrop-filter: blur(10px);"></div> -->
 
       <div class="timer">
         <span class="timer_number minute">00</span>
@@ -81,13 +83,6 @@
     <div class="menu__design starter info_bar">
       <input type="radio" name="menu" id="info_bar" hidden />
       <label for="info_bar">
-        
-        <!-- <input type="checkbox" name="edit_svg1" id="edit_svg1" hidden>
-        <div class="edit">
-          <label for="edit_svg1">
-            <svg class="edit_svg" width="30" viewBox="0 0 24 24" role="img" aria-label="Edit-icon"><path d="M20.75 21.941h-7.254a.75.75 0 0 1 0-1.5h7.253a.75.75 0 0 1 0 1.5" clip-rule="evenodd" fill-rule="evenodd"></path><mask id="mask0_1732_25388" width="18" height="19" x="2" y="3" maskUnits="userSpaceOnUse" style="mask-type: luminance;"><path d="M2 3h17.18v18.94H2z" clip-rule="evenodd"></path></mask><g><path d="M13.11 5.015 3.695 16.79c-.171.214-.234.49-.171.755l.68 2.885 3.04-.038a.949.949 0 0 0 .733-.352c3.217-4.025 9.35-11.699 9.524-11.924a1.36 1.36 0 0 0 .142-1.004 1.411 1.411 0 0 0-.652-.887 328.898 328.898 0 0 1-1.808-1.398 1.497 1.497 0 0 0-2.073.188M3.613 21.94a.75.75 0 0 1-.73-.577l-.819-3.471a2.371 2.371 0 0 1 .46-2.037l9.42-11.782c.004-.004.007-.01.011-.013 1.033-1.235 2.901-1.417 4.161-.406l1.723 1.339c.608.362 1.083 1.009 1.263 1.775.18.758.05 1.54-.368 2.2-.03.05-.058.092-9.586 12.012a2.447 2.447 0 0 1-1.886.914l-3.639.046h-.01" clip-rule="evenodd"></path></g><path d="M16.221 11.683a.753.753 0 0 1-.457-.155L10.314 7.34a.75.75 0 0 1 .913-1.189l5.454 4.187a.75.75 0 0 1-.459 1.345" clip-rule="evenodd" fill-rule="evenodd"></path></svg>    
-          </label>
-        </div> -->
         
         <div class="prof_photo">
           <svg viewBox="0 0 16 16"><path d="M10.561 8.073a6.005 6.005 0 0 1 3.432 5.142.75.75 0 1 1-1.498.07 4.5 4.5 0 0 0-8.99 0 .75.75 0 0 1-1.498-.07 6.004 6.004 0 0 1 3.431-5.142 3.999 3.999 0 1 1 5.123 0ZM10.5 5a2.5 2.5 0 1 0-5 0 2.5 2.5 0 0 0 5 0Z"></path></svg>
@@ -165,61 +160,55 @@
             </div>
           </div>
         </div>
-        <!-- <div class="history_board fa_history"></div>
-        <div class="history_board en_history"></div>
-        <div class="history_board num_history"></div>
-        <div class="history_board code_history"></div> -->
-        
-        <!-- <svg viewBox="0 0 16 16" width="60px"><path d="M1.5 1.75V13.5h13.75a.75.75 0 0 1 0 1.5H.75a.75.75 0 0 1-.75-.75V1.75a.75.75 0 0 1 1.5 0Zm14.28 2.53-5.25 5.25a.75.75 0 0 1-1.06 0L7 7.06 4.28 9.78a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042l3.25-3.25a.75.75 0 0 1 1.06 0L10 7.94l4.72-4.72a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042Z"></path></svg> -->
       </label>
     </div>
 
     <div class="menu__design starter start_type">
 
-      <div class="typing_mode_container typing_mode_container_fa">
-        <div class="typing_mode fa_mode">
-          <div class="typing_mode_data">
-            <div class="typing_svg">
+      <div class="typing_mode_container typing_mode_container_fa block">
+        <div class="typing_mode fa_mode block">
+          <div class="typing_mode_data block">
+            <div class="typing_svg block">
               <svg class="ani_svg" width="32" viewBox="0 0 206 338"><path stroke-width="1" opacity="1" d="M 133.5 18 L 143.5 20 L 160 35.5 Q 165.5 40 165 50.5 Q 157.7 73.7 142.5 89 Q 123.6 80.9 110 67.5 Q 116.6 37.6 133.5 18 Z " /><path stroke-width="1" opacity="1" d="M 70.5 57 L 72 58.5 L 72 72.5 L 58 184.5 L 56 223.5 Q 56.9 243.6 68.5 253 Q 79.5 263 102.5 261 Q 122.7 258.7 133 246.5 L 139 234.5 L 132.5 225 L 128.5 224 L 111.5 231 Q 100.4 230.1 95 223.5 Q 90.9 220.6 92 212.5 Q 100.5 181 119.5 160 L 129.5 157 Q 144.6 160.4 152 171.5 Q 163.7 184.3 161 211.5 Q 150.4 273.4 112.5 308 Q 98.8 321.8 69.5 320 Q 52.3 317.2 44 305.5 Q 28.2 283.8 32 242.5 Q 37 173.5 49 111.5 L 70.5 57 Z " /></svg>
             </div>
             <span class="mode_data">Persian Typing</span>
-            <div style="direction: rtl;" class="data_container_fa data_container"></div>
+            <div style="direction: rtl;" class="data_container_fa data_container block"></div>
           </div>
         </div>
       </div>
       
-      <div class="typing_mode_container typing_mode_container_en">
-        <div class="typing_mode en_mode">
-          <div class="typing_mode_data typing_mode_data_en">
-            <div class="typing_svg">
+      <div class="typing_mode_container typing_mode_container_en block">
+        <div class="typing_mode en_mode block">
+          <div class="typing_mode_data typing_mode_data_en block">
+            <div class="typing_svg block">
               <svg class="ani_svg" width="50" viewBox="0 0 270 206"><path stroke-width="1" opacity="1" d="M 4 6 L 124.5 6 L 125 34 L 37 34 L 37 86 L 113 86 L 113 114 L 37 114 L 37 172 L 125.5 172 L 126 200 L 4 200 L 4 6 Z " /><path stroke-width="1" opacity="1" d="M 207.5 51 Q 242.7 49.8 256 70.5 Q 263.5 82 265 99.5 L 265 200 L 232 200 L 232 104.5 Q 231.3 89.7 222.5 83 Q 213.8 77.7 197.5 80 Q 187 82.5 181 89.5 L 178 93.5 L 178 200 L 145 199.5 L 145 54 L 174.5 54 L 175 60.5 L 176.5 67 Q 187.5 54.5 207.5 51 Z " /></svg>
             </div>
             <span class="mode_data">English Typing</span>
-            <div class="data_container_en data_container"></div>
+            <div class="data_container_en data_container block"></div>
           </div>
         </div>
       </div>
       
-      <div class="typing_mode_container typing_mode_container_num">
-        <div class="typing_mode num_mode">
-          <div class="typing_mode_data">
-            <div class="typing_svg">
+      <div class="typing_mode_container typing_mode_container_num block">
+        <div class="typing_mode num_mode block">
+          <div class="typing_mode_data block">
+            <div class="typing_svg block">
               <svg class="ani_svg" width="46"viewBox="0 0 246 218" ><path stroke-width="1" opacity="1" d="M 62.5 11 Q 104.3 9.7 120 34.5 Q 131.8 49.2 134 73.5 L 134 147.5 Q 130.3 183.3 107.5 200 Q 93.7 210.7 69.5 211 Q 38.6 208.9 24 190.5 Q 11.5 176.5 8 153.5 L 8 69.5 Q 12.7 38.7 32.5 23 Q 44.1 13.6 62.5 11 Z M 65 39 L 54 44 Q 43 52 41 68 L 41 154 L 49 174 Q 54 182 67 183 Q 79 184 87 179 Q 100 170 101 150 L 101 73 Q 100 59 94 51 Q 87 37 65 39 Z " /><path stroke-width="1" opacity="1" d="M 231.5 11 L 239 11.5 L 239 208 L 206 208 L 206 45.5 L 165 45 L 165 19.5 L 173.5 17 L 231.5 11 Z " /></svg>
             </div>
             <span class="mode_data">Number Typing</span>
-            <div class="data_container_num data_container"></div>
+            <div class="data_container_num data_container block"></div>
           </div>
         </div>
       </div>
       
-      <div class="typing_mode_container typing_mode_container_code">
-        <div class="typing_mode code_mode">
-          <div class="typing_mode_data">
-            <div class="typing_svg">
+      <div class="typing_mode_container typing_mode_container_code block">
+        <div class="typing_mode code_mode block">
+          <div class="typing_mode_data block">
+            <div class="typing_svg block">
               <svg class="ani_svg" class="mode_data" viewBox="0 0 16 16" width="60"><path d="m11.28 3.22 4.25 4.25a.75.75 0 0 1 0 1.06l-4.25 4.25a.749.749 0 0 1-1.275-.326.749.749 0 0 1 .215-.734L13.94 8l-3.72-3.72a.749.749 0 0 1 .326-1.275.749.749 0 0 1 .734.215Zm-6.56 0a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042L2.06 8l3.72 3.72a.749.749 0 0 1-.326 1.275.749.749 0 0 1-.734-.215L.47 8.53a.75.75 0 0 1 0-1.06Z"></path></svg>
             </div>
             <span class="mode_data">Code Typing</span>
-            <div class="data_container_code data_container"></div>
+            <div class="data_container_code data_container block"></div>
           </div>
         </div>
       </div>
@@ -272,28 +261,11 @@
         </div>
 
       </div>
+
       <div class="costum_divs middle_settings">
-
-        <!-- <div class="language">
-
-          <input type="radio" name="language_radio" id="language_enId"hidden checked>
-          <input type="radio" name="language_radio" id="language_faId"hidden>
-          
-          
-          <div class="language1 language_en">
-            <label class="language_label language_en_label" for="language_enId" ><span class="lan_span">En</span></label>
-          </div>
-          
-          <div class="language1 language_fa">
-            <label class="language_label language_fa_label" for="language_faId" ><span class="lan_span">فا</span></label>
-          </div>
-          
-          <div class="lan_choser"></div>
-          
-
-        </div> -->
         <div class="info_bar_bg"></div>
       </div>
+
       <div class="costum_divs fonts">
 
         <div class="en_font_chose">
@@ -324,12 +296,6 @@
             <label class="en_font_label" for="en_fontId4" ></label>
           </div>
           
-          <!-- <div class="en_font en_font5" >
-            <input type="radio" name="en_font" id="en_fontId5" font="courier new" position="6%" hidden>
-            <span style="font-family:'courier new' ;">Ourier New</span>
-            <label class="en_font_label" for="en_fontId5" ></label>
-          </div> -->
-          
         </div>
         
         <div class="fa_font_chose">
@@ -359,12 +325,6 @@
             <span style="font-family: koodak;">کودک</span>
             <label class="fa_font_label" for="fa_fontId4" ></label>
           </div>
-          
-          <!-- <div class="fa_font fa_font5">
-            <input type="radio" name="fa_font" id="fa_fontId5" font="nazanin" position="5%" hidden>
-            <span style="font-family: nazanin ;">نازنین</span>
-            <label class="fa_font_label" for="fa_fontId5" ></label>
-          </div> -->
 
         </div>
       </div>
@@ -382,10 +342,10 @@
           <div class="testing_box"></div>
         </div>
         
-        <div class="adding" id="addingg">
-          <div class="adding_icon" id="addingg">
-            <div class="adding_line adding_line1"id="addingg"></div>
-            <div class="adding_line adding_line2"id="addingg"></div>
+        <div class="adding block" id="addingg">
+          <div class="adding_icon block" id="addingg">
+            <div class="adding_line adding_line1 block"id="addingg"></div>
+            <div class="adding_line adding_line2 block"id="addingg"></div>
           </div>
         </div>
           

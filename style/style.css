@@ -1,4 +1,3 @@
-
 @font-face {
   font-family: "tahoma";
   src: url("../font/Tahoma.ttf") format("truetype");
@@ -49,11 +48,6 @@
   src: url("../font/MatrixType-Regular.ttf") format("truetype");
   font-display: block;
 }
-/* @font-face {
-  font-family: "courier new";
-  src: url("../font/Courier New.ttf") format("truetype");
-  font-display: block;
-} */
 
 :root {
   font-size: 16px;
@@ -547,7 +541,6 @@ label {
   position: absolute;
   width: 100%;
   height: 100%;
-  /* background-color: #00000034; */
   backdrop-filter: blur(20px);
   z-index: 95;
   transition: all 0.3s ease;
@@ -972,6 +965,28 @@ input[name="fa_font"]:checked + span {
 #add_text_area:focus + svg {
   transform: scale(0.8);
   opacity: 0;
+}
+
+.warning{
+  top: -70px;
+  border: 1px solid #a60000;
+  left: 50vw;
+  opacity: 0.1;
+  transform: translateX(-50%) scale(0.6);
+  position: fixed;
+  z-index: 100;
+  display: flex;
+  height: 80px;
+  width: 280px;
+  border-radius: 50px;
+  background-color: #ff00003b;
+  backdrop-filter: blur(6px);
+  align-items: center;
+  transition: all .5s cubic-bezier(0, 0, 0, 1.75);
+}
+
+.warning_svg{
+  display: inline-block;
 }
 
 .adding {
@@ -1511,7 +1526,7 @@ input[name="fa_font"]:checked + span {
   }
   body {
   overflow: initial;
-  height: 150vh;
+  min-height: 1220px;
   display: grid;
   padding: 30px;
   gap: 25px;
@@ -1537,7 +1552,7 @@ input[name="fa_font"]:checked + span {
   }
   body {
   overflow: initial;
-  height: 130vh;
+  min-height: 1100px;
   display: grid;
   padding: 20px;
   gap: 20px;
@@ -1563,7 +1578,7 @@ input[name="fa_font"]:checked + span {
   }
   body {
   overflow: initial;
-  height: 140vh;
+  min-height: 1150px;
   display: grid;
   padding: 20px;
   gap: 20px;
@@ -1602,22 +1617,23 @@ input[name="fa_font"]:checked + span {
   }
   body {
   overflow: initial;
-  height: 140vh;
+  min-height: 1250px;
   display: grid;
   padding: 20px;
   gap: 20px;
   grid-template-columns: repeat(16, 1fr);
-  grid-template-rows: repeat(10 , 1fr);
+  grid-template-rows: repeat(11 , 1fr);
   grid-template-areas: "f f f f f f f f f f f f f f f f"
                        "e e e e e e e e e e e e e e e e"
                        "e e e e e e e e e e e e e e e e" 
-                       "x x x x x x g g g g . . . . . ."
+                       "g g g g g g g g g g g g g g g g "
                        "b b b b b b b b c c c c c c c c" 
                        "b b b b b b b b c c c c c c c c" 
                        "b b b b b b b b c c c c c c c c" 
-                       "d d d d d d d d a a a a a a a a"
-                       "d d d d d d d d a a a a a a a a"
-                       "d d d d d d d d a a a a a a a a";
+                       "d d d d d d d d d d a a a a a a"
+                       "d d d d d d d d d d a a a a a a"
+                       "d d d d d d d d d d a a a a a a"
+                       "d d d d d d d d d d x x x x x x";
 }
 }
 @media screen and (max-width: 510px){
@@ -1656,57 +1672,38 @@ input[name="fa_font"]:checked + span {
     opacity: 0.5;
     font-size: 1rem;
   }
+  .score_monitor{
+    padding: 10px;
+  }
   body {
   overflow-x: hidden;
-  height: 200vh;
+  min-height: 1800px;
   display: grid;
   padding: 20px;
   gap: 20px;
   grid-template-columns: repeat(16, 1fr);
-  grid-template-rows: repeat(18 , 1fr);
+  grid-template-rows: repeat(21 , 1fr);
   grid-template-areas: "f f f f f f f f f f f f f f f f"
                        "e e e e e e e e e e e e e e e e"
                        "e e e e e e e e e e e e e e e e" 
                        "e e e e e e e e e e e e e e e e" 
-                       "x x x x x x g g g g . . . . . ."
+                       "g g g g g g g g g g g g g g g g"
+                       "c c c c c c c c c c c c c c c c" 
                        "c c c c c c c c c c c c c c c c" 
                        "c c c c c c c c c c c c c c c c" 
                        "c c c c c c c c c c c c c c c c" 
                        "b b b b b b b b b b b b b b b b"
                        "b b b b b b b b b b b b b b b b"
                        "b b b b b b b b b b b b b b b b"
+                       "d d d d d d d d d d d d d d d d"
                        "d d d d d d d d d d d d d d d d"
                        "d d d d d d d d d d d d d d d d"
                        "d d d d d d d d d d d d d d d d"
                        "d d d d d d d d d d d d d d d d"
                        "a a a a a a a a a a a a a a a a"
                        "a a a a a a a a a a a a a a a a"
-                       "a a a a a a a a a a a a a a a a";
+                       "a a a a a a a a a a a a a a a a"
+                       "x x x x x x x x x x x x x x x x";
 }
 }
-/* @media screen and (max-width: 650px){
-  :root{
-    font-size: 12px;
-  }
-  .mode_data{
-    font-size: 1rem !important;
-  }
-  body {
-  overflow: initial;
-  height: 140vh;
-  display: grid;
-  padding: 20px;
-  gap: 20px;
-  grid-template-columns: repeat(16, 1fr);
-  grid-template-rows: repeat(9 , 1fr);
-  grid-template-areas: "f f f f f f f f f f f f f f f f"
-                       "e e e e e e e e e e e e e e e e"
-                       "e e e e e e e e e e e e e e e e" 
-                       "x x x x x x g g g g c c c c c c"
-                       "b b b b b b b b b b c c c c c c" 
-                       "b b b b b b b b b b c c c c c c" 
-                       "d d d d d d d d a a a a a a a a"
-                       "d d d d d d d d a a a a a a a a"
-                       "d d d d d d d d a a a a a a a a";
-}
-} */
+

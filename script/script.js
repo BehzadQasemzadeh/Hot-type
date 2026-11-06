@@ -1,58 +1,3 @@
-// const persianarray = ['ض', 'ص', 'ث', 'ق', 'ف', 'غ', 'ع', 'ه', 'خ', 'ح', 'ج', 'چ', 'ش', 'س', 'ی', 'ب', 'ل', 'ت', 'ن', 'م', 'ک', 'گ', 'ظ', 'ط', 'پ', 'ك', 'ئ', 'ي', 'ة'];
-// const persianarray1 = ['ض', 'ص', 'ث', 'ق', 'ف', 'غ', 'ع', 'ه', 'خ', 'ح', 'ج', 'چ', 'ش', 'س', 'ی', 'ب', 'ل', 'ت', 'ن', 'م', 'ک', 'گ', 'ظ', 'ط', 'پ', 'ك', 'ئ', 'ي', 'ة', 'ؤ', 'ئ', 'ي', 'إ', 'أ', 'آ', 'ژ', '‌', 'ا', 'و', 'د', 'ذ', 'ر', 'ز'];
-// 
-// function checkingAll(checkBox, changeEL) {
-//     if (checkBox.checked) {
-//         changeEL.forEach((event) => {
-//             event.style.opacity = '1';
-//             event.style.pointerEvents = 'initial';
-//         });
-//     }
-//     else {
-//         changeEL.forEach((event) => {
-//             event.style.opacity = '0';
-//             event.style.pointerEvents = 'none';
-//         });
-//     }
-// }
-// 
-// startBtnEL.addEventListener('change', ()=> checkingAll(startBtnEL, menuDesignEL));
-
-
-// string to html code for persian
-// 
-// if (isPersian) {
-//     textCode += texttext[0];
-//     console.log(persianarray);
-//     for (let i = 0; i < texttext.length - 1; i++) {
-//         if (persianarray.includes(texttext[i]) && persianarray1.includes(texttext[i + 1])) {
-//             textCode += `&zwj;</span><span class="letter">&zwj;${texttext[i + 1]}`;
-//         }
-//         else if (texttext[i] === " ") {
-//             textCode += ` </span></span><span class="word"><span class="letter">${texttext[i + 1]}`;
-//         }
-//         else {
-//             textCode += `</span><span class="letter">${texttext[i + 1]}`;
-//         }
-//     }
-//     textCode += "</span>";
-// }
-
-// // string to html code for persian
-// 
-// else {
-//     textCode = '<span class="word">';
-//     texttext.split("").forEach(event => {
-//         if (event === " ") {
-//             textCode += `</span></span><span class="word">`;
-//         }
-//         else {
-//             textCode += `<span class="letter">           ${event}</span>`;
-//         }
-//     });
-// }
-
-
 //=============================================================== vars ===============================================================
 const fa_array = [
     'ضرب‌المثل‌ها چکیده تجربه نسل‌ها هستند. «کار نیکو کردن از پر کردن است»، یعنی تمرین و تکرار کلید مهارت است. «جوجه را آخر پاییز می‌شمارند» به ما می‌آموزد عجله نکنیم و نتیجه را در پایان کار بسنجیم. «آب که از سر گذشت، چه یک وجب چه صد وجب» گاهی طنز تلخی در خود دارد. این جملات کوتاه، درس‌های بزرگی به زبان ساده بیان می‌کنند و هنوز پس از قرن‌ها در گفتگوهای روزمره ما زنده‌اند.',
@@ -233,6 +178,8 @@ const numScoreTop = document.querySelector('#num_score_top');
 const codeScore = document.querySelector('#code_score');
 const codeScoreTop = document.querySelector('#code_score_top');
 const gitLink = document.querySelector('.git_link');
+const warning = document.querySelector('.warning');
+const bgImage = document.querySelector('.bg_image_1');
 
 
 
@@ -273,6 +220,9 @@ let falsein = false;
 let start_time = true;
 let mode = '';
 let hisContent;
+let windowWidth = window.innerWidth;
+let blocked= true;
+let controller = null;
 
 //=============================================================== funcs ===============================================================
 
@@ -310,6 +260,12 @@ const localThemeFontUsername = () => {
     if (localUserName) {
         username.value = localUserName;
     }
+    
+    // bgImage
+    const localbgImage = JSON.parse(localStorage.getItem('localbgImage'));
+    if (localbgImage) {
+        bgImage.src = localbgImage;
+    }
 
     //scores
     const storedScores = JSON.parse(localStorage.getItem('localScores'));
@@ -324,16 +280,6 @@ const localThemeFontUsername = () => {
         codeScore.innerHTML = localScores.localLastcode;
         codeScoreTop.innerHTML = localScores.localTopcode;
     }
-
-
-    // console.log("LastFa "+localScores.localLastFa);
-    // console.log("TopFa "+localScores.localTopFa);
-    // console.log("LastEn "+localScores.localLastEn);
-    // console.log("TopEn "+localScores.localTopEn);
-    // console.log("Lastnum "+localScores.localLastnum);
-    // console.log("Topnum "+localScores.localTopnum);
-    // console.log("Lastcode "+localScores.localLastcode);
-    // console.log("Topcode "+localScores.localTopcode);
 
     // font
     const localFont = JSON.parse(localStorage.getItem('localFont'));
@@ -1028,18 +974,7 @@ const goToTypeMode = (one, two, three, mod) => {
     }, 250);
 }
 
-
-
-
-//========================================================= event listeners ===============================================================
-
-// for disable right click
-// document.addEventListener('contextmenu', event => event.preventDefault())
-
-
-
-// change theme
-themeColors.addEventListener('click', event => {
+const setTheme = (event) => {
 
     const choseTheme = event.target.closest('.theme_checkbox');
 
@@ -1075,14 +1010,81 @@ themeColors.addEventListener('click', event => {
         // console.log(choseTheme);
         localStorage.setItem('localTheme', JSON.stringify(localTheme));
     }
-});
+}
+
+const warningMassage = (event) => {
+    if(event.target.classList.contains("block") && blocked) {
+        setTimeout(() => {
+            warning.style.setProperty("transform", "translateX(-50%) scale(0.6)");
+            warning.style.setProperty("opacity", "0.3");
+        }, 5000);
+        warning.style.setProperty("transform", "translate(-50% , 95px) scale(1)");
+        warning.style.setProperty("opacity", "1");
+    }
+}
+
+const goGitHub = () => {
+    startBtnEL.checked= false;
+    window.location.href = 'https://github.com/Behzadqasemzadeh';
+}
+
+const resizeWarning = () => {
+  windowWidth = window.innerWidth;
+  blocking();
+}
+
+const changeImage = () => {
+  if(bgImage.src.includes('image1')){
+    bgImage.src = "style/image2.jpeg";
+    localbgImage = "style/image2.jpeg"    
+  }
+  else if(bgImage.src.includes('image2')){
+    bgImage.src = "style/image1.jpeg";
+    localbgImage = "style/image1.jpeg"
+  }
+  localStorage.setItem('localbgImage', JSON.stringify(localbgImage));
+}
+
+//for block and unblock
+const blocking = () => {
+  const shouldEnable = windowWidth > 1000;
+
+  if (shouldEnable && !controller) {
+    controller = new AbortController();
+    const { signal } = controller;
+    blocked= false;
+    addingEL.addEventListener('click', goAddingType, { signal });
+    typingModeContainerEn  .addEventListener('click', () => goToTypeMode(typingModeContainerCode, typingModeContainerFa, typingModeContainerNum, 'en'),   { signal });
+    typingModeContainerFa  .addEventListener('click', () => goToTypeMode(typingModeContainerCode, typingModeContainerEn, typingModeContainerNum, 'fa'),   { signal });
+    typingModeContainerCode.addEventListener('click', () => goToTypeMode(typingModeContainerEn, typingModeContainerFa, typingModeContainerNum, 'code'), { signal });
+    typingModeContainerNum .addEventListener('click', () => goToTypeMode(typingModeContainerCode, typingModeContainerFa, typingModeContainerEn, 'num'),  { signal });
+  } else if (!shouldEnable && controller) {
+    controller.abort();
+    controller = null;
+    blocked= true;
+  }
+};
+
+blocking();
+
+
+//========================================================= event listeners ===============================================================
+
+// for disable right click
+// document.addEventListener('contextmenu', event => event.preventDefault())
+
+window.addEventListener('resize', resizeWarning);
+
+// change theme
+themeColors.addEventListener('click', event => setTheme(event));
+
+document.addEventListener('click', event => warningMassage(event));
 
 username.addEventListener('change', saveUserName);
 
-gitLink.addEventListener('click', () => {
-    startBtnEL.checked= false;
-    window.location.href = 'https://github.com/Behzadqasemzadeh';
-});
+gitLink.addEventListener('click', goGitHub);
+
+bluring.addEventListener('click', changeImage);
 
 
 // personal theme pallet
@@ -1096,17 +1098,6 @@ faFontChose.addEventListener('change', (event) => fontChoseer(event, 'rtl', chos
 
 // en change font
 enFontChose.addEventListener('change', (event) => fontChoseer(event, 'ltr', choserE, choserF));
-
-
-// for adding button
-addingEL.addEventListener('click', goAddingType);
-
-
-// for typing mode buttons
-typingModeContainerEn.addEventListener('click', () => goToTypeMode(typingModeContainerCode, typingModeContainerFa, typingModeContainerNum, 'en'));
-typingModeContainerFa.addEventListener('click', () => goToTypeMode(typingModeContainerCode, typingModeContainerEn, typingModeContainerNum, 'fa'));
-typingModeContainerCode.addEventListener('click', () => goToTypeMode(typingModeContainerEn, typingModeContainerFa, typingModeContainerNum, 'code'));
-typingModeContainerNum.addEventListener('click', () => goToTypeMode(typingModeContainerCode, typingModeContainerFa, typingModeContainerEn, 'num'));
 
 
 //============================================================= cods ===================================================================
